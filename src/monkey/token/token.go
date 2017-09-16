@@ -10,8 +10,13 @@ type Token struct {
 }
 
 var keywords = map[string]TokenType{
-	"fn":  FUNCTION,
-	"let": LET,
+	"else":   ELSE,
+	"false":  FALSE,
+	"fn":     FUNCTION,
+	"if":     IF,
+	"let":    LET,
+	"return": RETURN,
+	"true":   TRUE,
 }
 
 // LookupIdent check if the ident is part of the
@@ -30,8 +35,17 @@ const (
 	IDENT = "IDENT"
 	INT   = "INT"
 
-	ASSIGN = "="
-	PLUS   = "+"
+	ASSIGN   = "="
+	EQ       = "=="
+	NOT_EQ   = "=="
+	ASTERISK = "*"
+	BANG     = "!"
+	MINUS    = "-"
+	PLUS     = "+"
+	SLASH    = "/"
+
+	GT = ">"
+	LT = "<"
 
 	COMMA     = ","
 	SEMICOLON = ";"
@@ -43,4 +57,10 @@ const (
 
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+
+	TRUE   = "TRUE"
+	FALSE  = "FALSE"
+	IF     = "IF"
+	ELSE   = "ELSE"
+	RETURN = "RETURN"
 )
